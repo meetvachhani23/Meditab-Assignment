@@ -2,6 +2,8 @@ git add -A
 
 git status
 
+git commit -m "Day3 Commit"
+
 git push -u -f origin main
 
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures

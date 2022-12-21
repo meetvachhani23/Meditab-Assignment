@@ -155,8 +155,8 @@
                                 <a href="#index"><i class="fa-solid fa-gear"></i></a>
                                 <input type="button" value="Re-verify" >
                                 <i class="fa-regular fa-circle-check"></i>
-                                <input type="submit" onclick="resetFunction()" value="Cancel Changes">
-                                <button type="submit" onclick="ageCalculator()" style="padding: 0.18rem 1.3rem; background-color: #5A5FE2; color: #FFFFFF; border: 0;">Submit</button>
+                                <input type="button" onClick="resetFunction()" value="Cancel Changes">
+                                <button type="submit" onClick="ageCalculator()" form="s-form" style="padding: 0.18rem 1.3rem; background-color: #5A5FE2; color: #FFFFFF; border: 0;">SAVE</button>
 
                             </section>
                         </div>
@@ -172,12 +172,13 @@
                                                 </div>
                                                 <div class="right-profile-pic">
                                                     <img  class="profile-pic" src="profile martin james byrde.jpg" alt="profile martin james byrde">
+                                                    <label for="" style="width: 100%; font-size: 1rem; color: #989AB1; font-weight: 700;">PT0000000001</label>
                                                 </div>
                                             </div>
                                             
                                             <div class="srow-fcolumn-2">
                                                 <div class="left-text">
-                                                    <label for="Prefix">Prefix:</label>
+                                                    <label for="Prefix">Prefix<span style="color: red; font-size: 1rem;">*</span>:</label>
                                                 </div>
                                                 <div class="right-box">
                                                     <input type="text" id="Prefix" class="text-box-in" name="Prefix" value="Mr">
@@ -186,10 +187,10 @@
                 
                                             <div class="srow-fcolumn-2">
                                                 <div class="left-text">
-                                                    <label for="fname">First Name*:</label>
+                                                    <label for="fname">First Name<span style="color: red; font-size: 1rem;">*</span>:</label>
                                                 </div>
                                                 <div class="right-box">
-                                                    <input type="text" id="fname" class="text-box-in" name="fname" >
+                                                    <input type="text" id="fname" class="text-box-in" name="fname" required>
                                                 </div>
                                             </div>
                 
@@ -204,10 +205,10 @@
                 
                                             <div class="srow-fcolumn-2">
                                                 <div class="left-text">
-                                                    <label for="lname">Last Name*:</label>
+                                                    <label for="lname">Last Name<span style="color: red; font-size: 1rem;">*</span>:</label>
                                                 </div>
                                                 <div class="right-box">
-                                                    <input type="text" id="lname" class="text-box-in" name="lname" value="">
+                                                    <input type="text" id="lname" class="text-box-in" name="lname" required>
                                                 </div>
                                             </div>
                 
@@ -242,10 +243,10 @@
                                         <div class="mcolumn">
                                             <div class="srow-mcolumn-1">
                                                 <div class="left-text">
-                                                    <label for="Sex">Sex*:</label>
+                                                    <label for="Sex">Sex<span style="color: red; font-size: 1rem;">*</span>:</label>
                                                 </div>
                                                 <div class="right-box">
-                                                    <select name="Sex" id="Sex" class="dropdown" value="" aria-placeholder="">
+                                                    <select name="Sex" id="Sex" class="dropdown" required>
                                                         <option value="Male">Male</option>
                                                         <option value="Female">Female</option>
                                                         <option value="other">Other</option>
@@ -258,7 +259,7 @@
                                                     <label for="DOB">DOB:</label>
                                                 </div>
                                                 <div class="right-box">
-                                                    <input type="Date" id="DOB" class="text-box-dob" name="DOB" value=""><br>
+                                                    <input type="Date" id="DOB" class="text-box-dob" name="DOB" required><br>
                                                     <span>calc date</span>
                                                 </div>
                                             </div>

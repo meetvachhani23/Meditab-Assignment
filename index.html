@@ -18,7 +18,7 @@
 </head>
 <body>
     <!-- 1 -->
-    <div>
+    <div style="width: 100%; height: 100%; overflow: hidden;">
         <!-- 2 -->
         <!-- 1.1 -->
         <div class="s2-p101">
@@ -80,10 +80,9 @@
             <!-- 2.2 -->
             <div class="s3-p202">
                 <!-- 4 -->
-                <div class="s3-p202-p301--p302">   
-                    <!-- 3.1 -->
+                <!-- 3.1 -->
                 <div class="s4-p301">
-                    <section style="width: calc(100% - 45px);">
+                    <section>
                         <div class="tabview">
                             <a href="#index">Patient</a>
                             <a href="#index">Byrde, Martin</a>
@@ -95,7 +94,7 @@
                 </div>
                 <!-- 3.2 -->
                 <div class="s4-p302">
-                    <section style="width: calc(100% - 45px);">
+                    <section>
                         <div class="patient-detail">
                             <a href="#index">Patient Bar</a>
                             <div style="float: right; padding: 0.5rem;">
@@ -104,43 +103,44 @@
                         </div>
                     </section>
                 </div>
-                </div>
                 
                 <!-- 3.3 -->
                 <div class="s4-p303">
                     <!-- 5 -->
                     <!-- 4.1 -->
                     <div class="s5-p401">
-                        <section class="left-section">
-                            <div class="left-side-nav">
-                                <a href="#about">Dashboard</a>
-                                <a href="#services" class="active">Demographics</a>
-                                <a href="#clients">Insurance</a>
-                                <a href="#contact">Case</a>
-                                <a href="#about">Contacts</a>
-                                <a href="#services">Employer</a>
-                                <a href="#clients">Appointments</a>
-                                <a href="#contact">Encounters</a>
-                                <a href="#about">Documents</a>
-                                <a href="#services">Notes & Alerts</a>
-                                <a href="#clients">Forms</a>
-                                <a href="#contact">Consents</a>
-                                <a href="#about">Reminder Preference</a>
+                        <section>
+                            <div class="left-side-nav-scroll">
+                            </div>
+                            <div class="left-side-nav" >
+                                <a href="#index">Dashboard</a>
+                                <a href="#index" class="active">Demographics</a>
+                                <a href="#index">Insurance</a>
+                                <a href="#index">Case</a>
+                                <a href="#index">Contacts</a>
+                                <a href="#index">Employer</a>
+                                <a href="#index">Appointments</a>
+                                <a href="#index">Encounters</a>
+                                <a href="#index">Documents</a>
+                                <a href="#index">Notes & Alerts</a>
+                                <a href="#index">Forms</a>
+                                <a href="#index">Consents</a>
+                                <a href="#index">Reminder Preference</a>
                                 <hr class="separator">
-                                <a href="#services">Allergy</a>
-                                <a href="#clients">Diagnosis</a>
-                                <a href="#contact">Family History</a>
-                                <a href="#about">Prescription</a>
-                                <a href="#services">Lab</a>
-                                <a href="#clients">Immunization</a>
-                                <a href="#contact">Vitals</a>
+                                <a href="#index">Allergy</a>
+                                <a href="#index">Diagnosis</a>
+                                <a href="#index">Family History</a>
+                                <a href="#index">Prescription</a>
+                                <a href="#index">Lab</a>
+                                <a href="#index">Immunization</a>
+                                <a href="#index">Vitals</a>
                                 <hr class="separator">
-                                <a href="#about">Authorization</a>
-                                <a href="#contact">Claims</a>
-                                <a href="#services">Receipt</a>
-                                <a href="#clients">Open Credit</a>
-                                <a href="#contact">Statements</a>
-                                <a href="#contact">Ledger</a>
+                                <a href="#index">Authorization</a>
+                                <a href="#index">Claims</a>
+                                <a href="#index">Receipt</a>
+                                <a href="#index">Open Credit</a>
+                                <a href="#index">Statements</a>
+                                <a href="#index">Ledger</a>
                             </div>
                         </section>
                     </div>
@@ -157,7 +157,6 @@
                                 <i class="fa-regular fa-circle-check"></i>
                                 <input type="button" onClick="resetFunction()" value="Cancel Changes">
                                 <button type="submit" onClick="ageCalculator()" form="s-form" style="padding: 0.18rem 1.3rem; background-color: #5A5FE2; color: #FFFFFF; border: 0;">SAVE</button>
-
                             </section>
                         </div>
                         <!-- 5.2 -->
@@ -500,11 +499,15 @@
                                     <br>
                                     <section class="trow">
                                         <div class="trow-1">
-                                            <div class="trow-101" style="font-size: 1.4rem">Contact Details<a href="#index"><i class="fa-solid fa-plus"></i></a></div>
-                                            <div class="trow-102" >Please set the preferences after adding the contact information, the section to set preference can be found below the contact section of the page.</div>
+                                            <div class="trow-101" style="font-size: 1.4rem">
+                                                Contact Details<a href="#index"><i class="fa-solid fa-circle-plus" onclick="addAddressField()"></i></a>
+                                            </div>
+                                            <div class="trow-102" >
+                                                Please set the preferences after adding the contact information, the section to set preference can be found below the contact section of the page.
+                                            </div>
                                         </div>
-                                        <div class="trow-input">
-                                            <div class="fcolumn">
+                                        <div class="trow-input" id="multiaddress">
+                                            <div class="fcolumn address">
                                                 <fieldset class="field-column">
                                                     <legend class="leg-column" >
                                                         <select name="" id="" class="select-option">
@@ -516,12 +519,12 @@
                                                     <div class="contact-container">
                                                         <div  style="justify-content: space-between; margin-bottom: 0.5rem;">
                                                             <div>
-                                                                <span style="color: black; font-size: 0.9rem; padding: 0.4%;">Address</span>
-                                                                <a href="#index" style="float: right;"><i class="fa-solid fa-trash-can"></i></a>
+                                                                <span style="color: black; font-size: 0.9rem; font-weight: 600; padding: 0.4%;">Address</span>
+                                                                <a href="#index" style="float: right;"><i class="fa-solid fa-trash-can" onclick="removeAddressField(this)"></i></a>
                                                             </div>
                                                         </div>
-                                                        <div class="street-field" style="width: 66%;">
-                                                            <div>
+                                                        <div class="street-field" style="width: 66%; margin: 1.25% 0%">
+                                                            <div style="margin: 0.5rem;">
                                                                 <label for="Street">Street</label>
                                                             </div>
                                                             <div>
@@ -535,7 +538,7 @@
                                                                         <label for="Zip">Zip</label>
                                                                     </div>
                                                                     <div>
-                                                                        <input type="text" class="text-box-in" id="Zip" name="Zip" placeholder="93727" value="93727">
+                                                                        <input type="text" class="text-box-in" style="margin: 0%;" id="Zip" name="Zip" placeholder="93727" value="93727">
                                                                     </div>
                                                                 </div>
                                                                 <div class="zip-rowcolumn" style="margin: 0.5rem;">
@@ -543,7 +546,7 @@
                                                                         <label for="City">City</label>
                                                                     </div>
                                                                     <div>
-                                                                        <input type="text" class="text-box-in" id="City" name="City" placeholder="">
+                                                                        <input type="text" class="text-box-in" style="margin: 0%;" id="City" name="City" placeholder="">
                                                                     </div>
                                                                 </div>
                                                                 <div class="zip-rowcolumn" style="margin: 0.5rem;">
@@ -551,7 +554,7 @@
                                                                         <label for="State">State</label>
                                                                     </div>
                                                                     <div>
-                                                                        <select name="State" id="State" class="text-box-dropdown" ">
+                                                                        <select name="State" id="State" class="text-box-dropdown" style="margin: 0%;">
                                                                             <option value="CALIFORNIA">CALIFORNIA</option>
                                                                             <option value="Washington">Washington</option>
                                                                             <option value="CALIFORNIA">CALIFORNIA</option>
@@ -560,10 +563,10 @@
                                                                 </div>
                                                                 <div class="zip-rowcolumn" style="margin: 0.5rem;">
                                                                     <div>
-                                                                        <label for="Country">Country</label>
+                                                                        <label for="Country" >Country</label>
                                                                     </div>
                                                                     <div>
-                                                                        <select name="Country" id="Country" class="text-box-dropdown">
+                                                                        <select name="Country" id="Country" class="text-box-dropdown" style="margin: 0%;">
                                                                             <option value="US">US</option>
                                                                             <option value="INDIA">INDIA</option>
                                                                         </select>
@@ -576,139 +579,135 @@
                                                             <div  >
                                                                 <div >
                                                                     <div style="margin: 0.5rem;">
-                                                                        <div>Phone<a href="#index"><i class="fa-solid fa-plus"></i></a></div>
+                                                                        <div>Phone<a href="#index"><i class="fa-solid fa-circle-plus"></i></a></div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="phone-row3">
-                                                                    <div class="phone-rowcolumn" style="margin: 0.5rem;">
-                                                                        <div>
+                                                                    <div class="phone-rows1" style="margin: 0.25rem 0.5rem 0.25rem 0.5rem;">
+                                                                        <div style="width: 10%;">
                                                                             <label for="Type">Type</label>
                                                                         </div>
-                                                                        <hr style="width:100%">
-                                                                        <div>
+                                                                        <div style="width: 13%; margin:0% 1.25%;">
+                                                                            <label for="Code">Code</label>
+                                                                        </div>
+                                                                        <div style="width: 30%; margin:0% 1.25%;"> 
+                                                                            <label for="Number">Number</label>
+                                                                        </div>
+                                                                        <div style="width: 20%; margin:0% 1.25%;">
+                                                                            <label for="Ext.">Ext.</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="phone-rows2" style="margin-left: 0.5rem;">
+                                                                        <div style="width: 10%;">
                                                                             <select name="Type" id="Type" class="text-box-dropdown">
                                                                                 <option value="Cell">Cell</option>
                                                                                 <option value="Landline">Landline</option>
                                                                             </select>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="phone-rowcolumn" style="margin: 0.5rem;">
-                                                                        <div>
-                                                                            <label for="Code">Code</label>
-                                                                        </div>
-                                                                        <hr>
-                                                                        <div>
+                                                                        <div style="width: 13%; margin:0% 1.25%;">
                                                                             <select name="Code" id="Code" class="text-box-dropdown">
                                                                                 <option value="CALIFORNIA">+91 India</option>
                                                                                 <option value="Washington">+1 United States</option>
                                                                                 <option value="CALIFORNIA">+213 Algeria</option>
                                                                             </select>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="phone-rowcolumn" style="margin: 0.5rem;">
-                                                                        <div>
-                                                                            <label for="Number">Number</label>
-                                                                        </div>
-                                                                        <hr>
-                                                                        <div>
+                                                                        <div style="width: 32%; margin:0%;">
                                                                             <input type="text" id="Number" class="text-box-in" name="Number" placeholder="(707) 322-1076" value="(707) 322-1076">
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="phone-rowcolumn" style="margin: 0.5rem;">
-                                                                        <div>
-                                                                            <label for="Ext.">Ext.</label>
+                                                                        <div style="width: 20%; margin:0% 1.25%;">
                                                                         </div>
-                                                                        <hr>
-                                                                        <div >
+                                                                        <div style="width: 10%; margin:0% 1.25%;">
+                                                                            <a href="#index" style="float: right;"><i class="fa-solid fa-trash-can"></i></a>
                                                                         </div>
-                                                                    </div>
-                                                                    <div  class="phone-rowcolumn" style="margin: 0.5rem; width:5%">
-                                                                        <a href="#index" style="float: right;"><i class="fa-solid fa-trash-can"></i></a>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div >
                                                                 <div>
                                                                     <div style="margin: 0.5rem;">
-                                                                        <div>Fax<a href="#index"><i class="fa-solid fa-plus"></i></a></div>
+                                                                        <div>Fax<a href="#index"><i class="fa-solid fa-circle-plus"></i></a></div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="fax-row4">
-                                                                    <div class="fax-rowcolumn" style="margin: 0.5rem;">
-                                                                        <div>
+                                                                    <div class="fax-rows1" style="margin: 0.25rem 0.5rem 0.25rem 0.5rem;">
+                                                                        <div style="width: 10%;">
                                                                             <label for="Code">Code</label>
                                                                         </div>
-                                                                        <hr>
-                                                                        <div>
-                                                                            <input type="text" class="text-box-in" id="Code" name="Code" placeholder="+91" value="+91">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="fax-rowcolumn" style="margin: 0.5rem;">
-                                                                        <div>
+                                                                        <div style="width: 30%; margin:0% 1.25%;">
                                                                             <label for="Number">Number</label>
                                                                         </div>
-                                                                        <hr>
-                                                                        <div>
+                                                                    </div>
+                                                                    <div class="fax-rows2" style="margin-left: 0.5rem;">
+                                                                        <div style="width: 10%;">
+                                                                            <input type="text" class="text-box-in" id="Code" name="Code" placeholder="+91" value="+91">
+                                                                        </div>
+                                                                        <div style="width: 30%;">
                                                                             <input type="text" class="text-box-in" id="Number" name="Number" placeholder="(971) 222-9147" value="(971) 222-9147">
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="fax-rowcolumn" style="margin: 0.5rem;">
-                                                                       
-                                                                    </div>
-                                                                    <div class="fax-rowcolumn" style="margin: 0.5rem;">
-                                                                
-                                                                    </div >
-                                                                    <div style="margin: 0.5rem;">
-                                                                        <a href="#index" style="float: right;"><i class="fa-solid fa-trash-can"></i></a>
+                                                                        <div style="width: 30%; margin:0% 2.5%;">
+                                                                            <a href="#index"  style="float: right;"><i class="fa-solid fa-trash-can"></i></a>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         
-                                                        <div  >
-                                                            <div >
-                                                                <div class="website-row5" style="margin-left: 0.5rem;">
-                                                                    <div>Email<a href="#index"><i class="fa-solid fa-plus"></i></a></div>
+                                                        <div class="emailSection" >
+                                                            <div>
+                                                                <div style="margin: 0.5rem;">
+                                                                    <div>Email<a href="#index"><i class="fa-solid fa-circle-plus" onclick="addEmailField(this)"></i></a></div>
                                                                 </div>
                                                             </div>
-                                                            <div class="email-row5" >
-                                                                <div class="email-rowcolumn" style="margin-left: 0.5rem;">
-                                                                    <input type="text" id="pname" class="text-box-in" name="pname" value="ashishj@meditab.com">
-                                                                </div>
-                                                                <div style="margin: 0.5rem;">
-                                                                    <a href="#index"><i class="fa-solid fa-trash-can"></i></a>
+                                                            <div class="multiEmail" id="multiEmail" >
+                                                                <div class="singleEmail">
+                                                                    <div class="email-rowcolumn">
+                                                                        <input type="email" id="email" class="text-box-in" name="email" value="ashishj@meditab.com">
+                                                                    </div>
+                                                                    <div style="margin: 0.5rem;">
+                                                                        <a href="#index"><i class="fa-solid fa-trash-can" onclick="removeEmailField(this)"></i></a>
+                                                                    </div>
                                                                 </div>
                                                             </div>  
                                                         </div>
-                                                        <div >
-                                                            <div class="website-row5" style="margin: 0.5rem;">
-                                                                <div>Website<a href="#index"><i class="fa-solid fa-plus"></i></a></div>
+                                                        <div class="websiteSection">
+                                                            <div style="margin: 0.5rem;">
+                                                                <div>Website<a href="#index"><i class="fa-solid fa-circle-plus" onclick="addWebsiteField(this)"></i></a></div>
                                                             </div>
-                                                            <!-- <div style="margin: 0.5rem;">
-                                                                <a href="#index"><i class="fa-solid fa-trash-can"></i></a>
-                                                            </div> -->
+                                                            <!--// <div style="margin: 0.5rem;">
+                                                               // <a href="#index"><i class="fa-solid fa-trash-can"></i></a>
+                                                           // </div> -->
+                                                            <div class="multiWebsite" id="multiWebsite">
+                                                                <!-- <div class="singleWebsite">
+                                                                    <div class="website-rowcolumn" name="Website" style="margin-left: 0.5rem;">
+                                                                        <input type="website" id="website" class="text-box-in" name="website" value="">
+                                                                    </div>
+                                                                    <div style="margin: 0.5rem;">
+                                                                        <a href="#index"><i class="fa-solid fa-trash-can" onclick="removeWebsiteField(this)"></i></a>
+                                                                    </div>
+                                                                </div> -->
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </fieldset>
                                             </div>
-                                            <div class="fcolumn">
+                                            <div class="fcolumn address">
                                                 <fieldset class="field-column">
                                                     <legend class="leg-column" >
                                                         <select name="" id="" class="select-option">
-                                                            <option value="">Work</option>
                                                             <option value="">Home</option>
+                                                            <option value="">Work</option>
                                                             <option value="">Other</option>
                                                         </select>
                                                     </legend>
                                                     <div class="contact-container">
                                                         <div  style="justify-content: space-between; margin-bottom: 0.5rem;">
                                                             <div>
-                                                                <span style="color: black; font-size: 0.9rem; padding: 0.4%;">Address</span>
-                                                                <a href="#index" style="float: right;"><i class="fa-solid fa-trash-can"></i></a>
+                                                                <span style="color: black; font-size: 0.9rem; font-weight: 600; padding: 0.4%;">Address</span>
+                                                                <a href="#index" style="float: right;"><i class="fa-solid fa-trash-can" onclick="removeAddressField(this)"></i></a>
                                                             </div>
                                                         </div>
-                                                        <div class="street-field" style="width: 66%;">
-                                                            <div>
+                                                        <div class="street-field" style="width: 66%; margin: 1.25% 0%">
+                                                            <div style="margin: 0.5rem;">
                                                                 <label for="Street">Street</label>
                                                             </div>
                                                             <div>
@@ -722,7 +721,7 @@
                                                                         <label for="Zip">Zip</label>
                                                                     </div>
                                                                     <div>
-                                                                        <input type="text" class="text-box-in" id="Zip" name="Zip" placeholder="93727" value="93727">
+                                                                        <input type="text" class="text-box-in" style="margin: 0%;" id="Zip" name="Zip" placeholder="93727" value="93727">
                                                                     </div>
                                                                 </div>
                                                                 <div class="zip-rowcolumn" style="margin: 0.5rem;">
@@ -730,7 +729,7 @@
                                                                         <label for="City">City</label>
                                                                     </div>
                                                                     <div>
-                                                                        <input type="text" class="text-box-in" id="City" name="City" placeholder="">
+                                                                        <input type="text" class="text-box-in" style="margin: 0%;" id="City" name="City" placeholder="">
                                                                     </div>
                                                                 </div>
                                                                 <div class="zip-rowcolumn" style="margin: 0.5rem;">
@@ -738,7 +737,7 @@
                                                                         <label for="State">State</label>
                                                                     </div>
                                                                     <div>
-                                                                        <select name="State" id="State" class="text-box-dropdown" ">
+                                                                        <select name="State" id="State" class="text-box-dropdown" style="margin: 0%;">
                                                                             <option value="CALIFORNIA">CALIFORNIA</option>
                                                                             <option value="Washington">Washington</option>
                                                                             <option value="CALIFORNIA">CALIFORNIA</option>
@@ -747,10 +746,10 @@
                                                                 </div>
                                                                 <div class="zip-rowcolumn" style="margin: 0.5rem;">
                                                                     <div>
-                                                                        <label for="Country">Country</label>
+                                                                        <label for="Country" >Country</label>
                                                                     </div>
                                                                     <div>
-                                                                        <select name="Country" id="Country" class="text-box-dropdown">
+                                                                        <select name="Country" id="Country" class="text-box-dropdown" style="margin: 0%;">
                                                                             <option value="US">US</option>
                                                                             <option value="INDIA">INDIA</option>
                                                                         </select>
@@ -763,122 +762,117 @@
                                                             <div  >
                                                                 <div >
                                                                     <div style="margin: 0.5rem;">
-                                                                        <div>Phone<a href="#index"><i class="fa-solid fa-plus"></i></a></div>
+                                                                        <div>Phone<a href="#index"><i class="fa-solid fa-circle-plus"></i></a></div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="phone-row3">
-                                                                    <div class="phone-rowcolumn" style="margin: 0.5rem;">
-                                                                        <div>
+                                                                    <div class="phone-rows1" style="margin: 0.25rem 0.5rem 0.25rem 0.5rem;">
+                                                                        <div style="width: 10%;">
                                                                             <label for="Type">Type</label>
                                                                         </div>
-                                                                        <hr style="width:100%">
-                                                                        <div>
+                                                                        <div style="width: 13%; margin:0% 1.25%;">
+                                                                            <label for="Code">Code</label>
+                                                                        </div>
+                                                                        <div style="width: 30%; margin:0% 1.25%;"> 
+                                                                            <label for="Number">Number</label>
+                                                                        </div>
+                                                                        <div style="width: 20%; margin:0% 1.25%;">
+                                                                            <label for="Ext.">Ext.</label>
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="phone-rows2" style="margin-left: 0.5rem;">
+                                                                        <div style="width: 10%;">
                                                                             <select name="Type" id="Type" class="text-box-dropdown">
                                                                                 <option value="Cell">Cell</option>
                                                                                 <option value="Landline">Landline</option>
                                                                             </select>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="phone-rowcolumn" style="margin: 0.5rem;">
-                                                                        <div>
-                                                                            <label for="Code">Code</label>
-                                                                        </div>
-                                                                        <hr>
-                                                                        <div>
+                                                                        <div style="width: 13%; margin:0% 1.25%;">
                                                                             <select name="Code" id="Code" class="text-box-dropdown">
                                                                                 <option value="CALIFORNIA">+91 India</option>
                                                                                 <option value="Washington">+1 United States</option>
                                                                                 <option value="CALIFORNIA">+213 Algeria</option>
                                                                             </select>
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="phone-rowcolumn" style="margin: 0.5rem;">
-                                                                        <div>
-                                                                            <label for="Number">Number</label>
-                                                                        </div>
-                                                                        <hr>
-                                                                        <div>
+                                                                        <div style="width: 32%; margin:0%;">
                                                                             <input type="text" id="Number" class="text-box-in" name="Number" placeholder="(707) 322-1076" value="(707) 322-1076">
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="phone-rowcolumn" style="margin: 0.5rem;">
-                                                                        <div>
-                                                                            <label for="Ext.">Ext.</label>
+                                                                        <div style="width: 20%; margin:0% 1.25%;">
                                                                         </div>
-                                                                        <hr>
-                                                                        <div >
+                                                                        <div style="width: 10%; margin:0% 1.25%;">
+                                                                            <a href="#index" style="float: right;"><i class="fa-solid fa-trash-can"></i></a>
                                                                         </div>
-                                                                    </div>
-                                                                    <div  class="phone-rowcolumn" style="margin: 0.5rem; width:5%">
-                                                                        <a href="#index" style="float: right;"><i class="fa-solid fa-trash-can"></i></a>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                             <div >
                                                                 <div>
                                                                     <div style="margin: 0.5rem;">
-                                                                        <div>Fax<a href="#index"><i class="fa-solid fa-plus"></i></a></div>
+                                                                        <div>Fax<a href="#index"><i class="fa-solid fa-circle-plus"></i></a></div>
                                                                     </div>
                                                                 </div>
                                                                 <div class="fax-row4">
-                                                                    <div class="fax-rowcolumn" style="margin: 0.5rem;">
-                                                                        <div>
+                                                                    <div class="fax-rows1" style="margin: 0.25rem 0.5rem 0.25rem 0.5rem;">
+                                                                        <div style="width: 10%;">
                                                                             <label for="Code">Code</label>
                                                                         </div>
-                                                                        <hr>
-                                                                        <div>
-                                                                            <input type="text" class="text-box-in" id="Code" name="Code" placeholder="+91" value="+91">
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="fax-rowcolumn" style="margin: 0.5rem;">
-                                                                        <div>
+                                                                        <div style="width: 30%; margin:0% 1.25%;">
                                                                             <label for="Number">Number</label>
                                                                         </div>
-                                                                        <hr>
-                                                                        <div>
+                                                                    </div>
+                                                                    <div class="fax-rows2" style="margin-left: 0.5rem;">
+                                                                        <div style="width: 10%;">
+                                                                            <input type="text" class="text-box-in" id="Code" name="Code" placeholder="+91" value="+91">
+                                                                        </div>
+                                                                        <div style="width: 30%;">
                                                                             <input type="text" class="text-box-in" id="Number" name="Number" placeholder="(971) 222-9147" value="(971) 222-9147">
                                                                         </div>
-                                                                    </div>
-                                                                    <div class="fax-rowcolumn" style="margin: 0.5rem;">
-                                                                       
-                                                                    </div>
-                                                                    <div class="fax-rowcolumn" style="margin: 0.5rem;">
-                                                                
-                                                                    </div >
-                                                                    <div style="margin: 0.5rem;">
-                                                                        <a href="#index" style="float: right;"><i class="fa-solid fa-trash-can"></i></a>
+                                                                        <div style="width: 30%; margin:0% 2.5%;">
+                                                                            <a href="#index"  style="float: right;"><i class="fa-solid fa-trash-can"></i></a>
+                                                                        </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
                                                         
-                                                        <div  >
-                                                            <div >
-                                                                <div class="website-row5" style="margin-left: 0.5rem;">
-                                                                    <div>Email<a href="#index"><i class="fa-solid fa-plus"></i></a></div>
+                                                        <div class="emailSection" >
+                                                            <div>
+                                                                <div style="margin: 0.5rem;">
+                                                                    <div>Email<a href="#index"><i class="fa-solid fa-circle-plus" onclick="addEmailField(this)"></i></a></div>
                                                                 </div>
                                                             </div>
-                                                            <div class="email-row5" >
-                                                                <div class="email-rowcolumn" style="margin-left: 0.5rem;">
-                                                                    <input type="text" id="pname" class="text-box-in" name="pname" value="ashishj@meditab.com">
-                                                                </div>
-                                                                <div style="margin: 0.5rem;">
-                                                                    <a href="#index"><i class="fa-solid fa-trash-can"></i></a>
+                                                            <div class="multiEmail" id="multiEmail" >
+                                                                <div class="singleEmail">
+                                                                    <div class="email-rowcolumn">
+                                                                        <input type="email" id="email" class="text-box-in" name="email" value="ashishj@meditab.com">
+                                                                    </div>
+                                                                    <div style="margin: 0.5rem;">
+                                                                        <a href="#index"><i class="fa-solid fa-trash-can" onclick="removeEmailField(this)"></i></a>
+                                                                    </div>
                                                                 </div>
                                                             </div>  
                                                         </div>
-                                                        <div >
-                                                            <div class="website-row5" style="margin: 0.5rem;">
-                                                                <div>Website<a href="#index"><i class="fa-solid fa-plus"></i></a></div>
+                                                        <div class="websiteSection">
+                                                            <div style="margin: 0.5rem;">
+                                                                <div>Website<a href="#index"><i class="fa-solid fa-circle-plus" onclick="addWebsiteField(this)"></i></a></div>
                                                             </div>
-                                                            <!-- <div style="margin: 0.5rem;">
-                                                                <a href="#index"><i class="fa-solid fa-trash-can"></i></a>
-                                                            </div> -->
+                                                            <!--// <div style="margin: 0.5rem;">
+                                                               // <a href="#index"><i class="fa-solid fa-trash-can"></i></a>
+                                                           // </div> -->
+                                                            <div class="multiWebsite" id="multiWebsite">
+                                                                <!-- <div class="singleWebsite">
+                                                                    <div class="website-rowcolumn" name="Website" style="margin-left: 0.5rem;">
+                                                                        <input type="website" id="website" class="text-box-in" name="website" value="">
+                                                                    </div>
+                                                                    <div style="margin: 0.5rem;">
+                                                                        <a href="#index"><i class="fa-solid fa-trash-can" onclick="removeWebsiteField(this)"></i></a>
+                                                                    </div>
+                                                                </div> -->
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </fieldset>
                                             </div>
-                                            
                                         </div>
                                     </section>
                                     <br>
@@ -933,7 +927,7 @@
                                                 </tr>
                                                 <tr>
                                                     <td><b>Preferred Comm.</b></td>
-                                                    <td colspan="5">
+                                                    <td colspan="5" style="padding: 0.3%;">
                                                         <div class="pre-comm-data">
                                                             <div class="pre-comm-data-left">
                                                                 <label for="pname">Type:</label>
@@ -1090,7 +1084,7 @@
                                                         <label for="Mother Identifier">Mother Identifier:</label>
                                                     </div>
                                                     <div class="right-box">
-                                                        <input type="text" id="Mother Identifier" name="Mother Identifier" value="Byrde">
+                                                        <input type="text" id="Mother Identifier" class="text-box-in" name="Mother Identifier" value="Byrde">
                                                     </div>
                                                 </div>
                                                 <div class="column-1">
@@ -1099,7 +1093,7 @@
                                                     </div>
                                                     <div class="right-box">
                                                         <input type="checkbox" id="Multiple Birth" name="Multiple Birth" value="Multiple Birth">
-                                                        <input type="text" id="Multiple Birth" name="Multiple Birth" value=" " disabled>
+                                                        <input type="text" id="Multiple Birth" class="text-box-in" style="background-color: #e8ebed; cursor: not-allowed; width: 93%;" name="Multiple Birth" value=" " disabled>
                                                     </div>
                                                 </div>
                                                 <div class="column-1">

@@ -1,22 +1,32 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    height: 100%;
+    width: 100%;
+}
 body{
     background-color: #f2f2f2;
     overflow-x: hidden;
     font-family: WebImsLato,sans-serif;
     color: #243b53;
     margin: 0px;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
 /* 2 */
 .s2-p101{
-    height: 6.5%;
+   
 }
 
 .topnav{
-    position: fixed;
     overflow: hidden;
     width: 100%;
     background-color: #fffefe;
-    border-bottom: 1px solid #e9eafb;
-    height: 5%;
+    border-bottom: 1px solid #cbcdec; 
 }
 
 .topnav a{
@@ -24,8 +34,8 @@ body{
     font-size: 1.6rem;
     text-align: center;
     color: #627d98;
-    margin-top: 2%;
-    margin-bottom: 2%;
+    margin-top: 1%;
+    margin-bottom: 1%;
     margin-left: 0.75%;
     margin-right: 0.75%;
     text-decoration: none
@@ -42,12 +52,10 @@ body{
     margin: 0.1%;
     display: flex;
     float: left;
-    /* flex-direction: left; */
 }
 
 .top-nav-right{
     margin: 0.1%;
-    /* margin-right: 1%; */
     display: flex;
     float: right;
     
@@ -70,11 +78,18 @@ body{
 
 .s2-p102{
     height: 95%;
-    padding-top: 2.5%;
+    width: 100%;
+  
 }
 
 /* 3 */
 /* s3-p201 */
+.s3-p201 {
+    /* height: 95%;
+    width: 100%; */
+
+}
+
 .right-nav-bar{
     width: 2.5%;
     height: 100%;
@@ -85,7 +100,7 @@ body{
     right: 0;
     overflow: hidden;
     background-color: #fffefe;
-    border-left: 1px solid #e9eafb;
+    border-left: 1px solid #cbcdec;
 }
 
 .right-nav-bar a {
@@ -110,19 +125,27 @@ body{
     justify-content: center;
 }
 
-/* 4 */
-.s3-p202-p301--p302{
-    background-color: #f2f2f2;
+.s3-p202 {
+    height: 95%;
+    width: 97.5%;
+    background-color: #f6f6f6;
 }
+
+/* 4 */
 /* s4-p301 */
+.s4-p301 {
+    /* height: 4.5%; */
+    width: 100%;
+    border-bottom: 1px solid #cbcdec;
+}
 
 .tabview {
-    background-color: #fff6f6;
+    background-color: #fffefe;
     overflow: hidden;
-    position: fixed;
-    width: 97.5%;
-    height: 4%;
-    border-bottom: 1px solid #cbcdec;
+    /* position: fixed; */
+    width: 100%;
+    /* height: 4%; */
+    
 }
 
 .tabview a {
@@ -137,14 +160,21 @@ body{
     margin: 0.5rem 0.5rem 0 0.5rem;
     text-decoration: none;
 }
+
 /* s4-p302 */
+.s4-p302 {
+    /* height: 5%; */
+    width: 100%;
+    /* border-bottom: 1px solid #000000; */
+}
+
 .patient-detail {
     /* background-color: transparent; */
-    position: fixed;
-    width: 97.5%;
-    height: 4%;
+    /* position: fixed; */
+    width: 100%;
+    height: 4.5%;
     overflow: hidden;
-    padding-top: 2.5%;
+    /* padding-top: 2.5%; */
 }
 .patient-detail a{
     float: left;
@@ -155,28 +185,58 @@ body{
     text-decoration: none;
 }
 
+.s4-p303 {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    /* background-color: #000000; */
+}
+
 
 /* 5 */
-/* s5-p401 */
+/* scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
 
-.left-section{
-    padding-top: 4%;
-    height: 86%;
-    width: 97%;
-    margin: 0.5rem;
-    position: fixed;
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #c1c1c1; 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #7e7d7d; 
+}
+
+/* s5-p401 */
+.s5-p401 {
+    width: 11%; 
+    height: 95%;
+    margin: 0.4%;
     overflow: hidden;
-    bottom: 0;
+    /* overflow-y: scroll; */
+    border: 1.8px solid #cbcdec;
+    background-color: #fffefe;
+    border-radius: 0.3rem;
+    display: flex;
+}
+
+.left-side-nav-scroll {
+    /* margin-right: 0.5rem; */
+    width: 2.5%;
+    height: 100%;
+    display: flex;
+    float: right;
 }
 
 .left-side-nav{
-    width: 13%;
+    width: 97.5%;
     height: 100%;
     overflow-x: hidden;
     overflow-y: scroll;
-    left: 0;
-    border: 2px solid #cbcdec;
-    background-color: #fff6f6;
+    
 }
 
 .left-side-nav a {
@@ -204,45 +264,47 @@ body{
     margin: 0.5rem;
 }
 
+/* s5-p402 */
 .s4-p402{
-    padding-top: 4.5%;
-    height: 83%;
+    height: 95%;
+    width: 90%;
 }
 
 /* 6 */
 /* s5-p501 */
 .s5-p501{
-    background-color: #f2f2f2;
-    margin-right: 3%;
-    margin-top: 1%;
-    width: 83%;
-    right: 0;
-    position: fixed;
-    float: right;
-
+    background-color: #f6f6f6;
+    display: flex;
+    width: 100%;
+    /* float: right; */
+    justify-content: end;
+    padding: 0.5%;
 }
 .frow{
+    display: flex;
     float: right;
-    padding-top: 1%;
+    padding-top: 2%;
+    padding-right: 1%;
+    gap: 5px;
 }
 
 /* s5-p502 */
 
 .s5-p502 {
     display: flex;
-    padding-left: 14%;
-    margin-top: 3.5%;
     width: 100%;
     height: 100%;
-    position: fixed;
     overflow-y: scroll;
+
   }
 
 .form-s5-p502{
     /* border: 1px solid black; */
-    height: 80%;
-    width: 84%;
+    height: 93.5%;
+    width: 100%;
     overflow-y: scroll;
+    overflow-x: hidden;
+    margin-left: 1%;
 }
 /* second row */
 .srow{
@@ -378,7 +440,7 @@ body{
 }
 
 .srow .text-box-in{
-    width: 96%;
+    width: 100%;
     font-size: 0.7rem;
     margin: 0.5% 0%;
     border: 1px solid #b0becb;
@@ -389,7 +451,7 @@ body{
     background: transparent;
 }
 .srow .text-box-dob{
-    width: 96%;
+    width: 100%;
     font-size: 0.7rem;
     margin: 0.3rem 0;
     border: 1px solid #b0becb;
@@ -535,27 +597,41 @@ body{
 }
 .trow .phone-row3{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     width: 100%;
     /* justify-content: center; */
 }
 
-.trow .phone-rowcolumn{
-    width: 30%;
-}
-
-.trow .fax-row4{
+.trow .phone-rows1{
     display: flex;
-    flex-direction: row;
     width: 96%;
+    border-bottom: 1px solid black;
+}
+
+.trow .phone-rows2{
+    display: flex;
+    width: 96%;
+}
+
+.trow .fax-row4 {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
     /* justify-content: center; */
 }
 
-.trow .fax-rowcolumn{
-    width: 100%;
+.trow .fax-rows1 {
+    display: flex;
+    width: 96%;
+    border-bottom: 1px solid black;
 }
 
-.trow .email-row5{
+.trow .fax-rows2 {
+    display: flex;
+    width: 96%;
+}
+
+.trow .singleEmail{
     display: flex;
     flex-direction: row;
     width: 80%;
@@ -567,7 +643,7 @@ body{
     width: 70%;
 }
 
-.trow .website-row6{
+.trow .singleWebsite{
     display: flex;
     flex-direction: row;
     width: 80%;
@@ -582,7 +658,7 @@ body{
 .trow .text-box-in{
     width: 97%;
     font-size: 0.7rem;
-    margin: 2.5% 0%;
+    margin: 0% 2.5%;
     border: 1px solid #b0becb;
     color: #243b53;
     border-radius: 0.4rem;
@@ -594,7 +670,7 @@ body{
 .trow .text-box-dropdown{
     width: 100%;
     font-size: 0.7rem;
-    margin: 2.5% 0%;
+    margin: 0% 2.5%;
     border: 1px solid #b0becb;
     color: #243b53;
     border-radius: 0.4rem;
@@ -694,7 +770,7 @@ table{
 }
 .forow .pre-comm-data-right{
     width: 50%;
-    padding-inline-start: 33%;
+    /* padding-inline-start: 30%; */
     /* margin-left: 33%; */
     
 }
@@ -781,7 +857,7 @@ table{
 }
 
 .firow .text-box-in{
-    width: 96%;
+    width: 100%;
     font-size: 0.7rem;
     margin: 0.3rem 0;
     border: 1px solid #b0becb;

@@ -31,19 +31,19 @@
                     <a href="#index"><i class="fa-solid fa-user"></i></a>
                     <a href="#index"><i class="fa-regular fa-calendar-days"></i></a>
                     <a href="#index"><i class="fa-solid fa-user-shield"></i></a>
-                    <a href="#index"><i class="fa-solid fa-shield-check"></i></a>
+                    <a href="#index"><i class="fa-solid fa-shield-halved"></i></a>
                     <a href="#index"><i class="fa-solid fa-right-to-bracket"></i></a>
                     <a href="#index"><i class="fa-solid fa-file-medical"></i></a>
                     <a href="#index"><i class="fa-solid fa-flask"></i></a>
                     <a href="#index"><i class="fa-solid fa-prescription"></i></a>
                     <a href="#index"><i class="fa-solid fa-file-prescription"></i></a>
-                    <a href="#index"><i class="fa-solid fa-file"></i></a>
+                    <a href="#index"><i class="fa-solid fa-file-lines"></i></a>
                     <a href="#index"><i class="fa-solid fa-dollar-sign"></i></a>
-                    <a href="#index"><i class="fa-solid fa-comments-dollar"></i></a>
-                    <a href="#index"><i class="fa-sharp fa-solid fa-file-invoice-dollar"></i></a>
+                    <a href="#index"><i class="fa-solid fa-file-invoice-dollar"></i></a>
+                    <a href="#index"><i class="fa-sharp fa-solid fa-magnifying-glass-dollar"></i></a>
                     <a href="#index"><i class="fa-solid fa-hand-holding-dollar"></i></a>
-                    <a href="#index"><i class="fa-solid fa-envelope-open-dollar"></i></a>
-                    <a href="#index"><i class="fa-solid fa-hands-holding-dollar"></i></a>
+                    <a href="#index"><i class="fa-solid fa-envelope-open-text"></i></a>
+                    <a href="#index"><i class="fa-solid fa-hands-holding-circle"></i></a>
                     <a href="#index"><i class="fa-solid fa-sack-dollar"></i></a>
                     <a href="#index"><i class="fa-solid fa-receipt"></i></a>
                     <a href="#index"><i class="fa-solid fa-book"></i></a>
@@ -53,7 +53,7 @@
             
                 <!-- right nav -->
                 <span class="top-nav-right">
-                    <form action="#">
+                    <form action="#" style="width: 100%;">
                         <input type="text" class="search-patient-box" name="searchbox" id="searchpatient" placeholder="Search Patient">
                     </form>
                     <a href="#index"><i class="fa-solid fa-calendar-week"></i></a>
@@ -108,41 +108,40 @@
                 <div class="s4-p303">
                     <!-- 5 -->
                     <!-- 4.1 -->
-                    <div class="s5-p401">
-                        <section>
-                            <div class="left-side-nav-scroll">
-                            </div>
-                            <div class="left-side-nav" >
-                                <a href="#index">Dashboard</a>
-                                <a href="#index" class="active">Demographics</a>
-                                <a href="#index">Insurance</a>
-                                <a href="#index">Case</a>
-                                <a href="#index">Contacts</a>
-                                <a href="#index">Employer</a>
-                                <a href="#index">Appointments</a>
-                                <a href="#index">Encounters</a>
-                                <a href="#index">Documents</a>
-                                <a href="#index">Notes & Alerts</a>
-                                <a href="#index">Forms</a>
-                                <a href="#index">Consents</a>
-                                <a href="#index">Reminder Preference</a>
-                                <hr class="separator">
-                                <a href="#index">Allergy</a>
-                                <a href="#index">Diagnosis</a>
-                                <a href="#index">Family History</a>
-                                <a href="#index">Prescription</a>
-                                <a href="#index">Lab</a>
-                                <a href="#index">Immunization</a>
-                                <a href="#index">Vitals</a>
-                                <hr class="separator">
-                                <a href="#index">Authorization</a>
-                                <a href="#index">Claims</a>
-                                <a href="#index">Receipt</a>
-                                <a href="#index">Open Credit</a>
-                                <a href="#index">Statements</a>
-                                <a href="#index">Ledger</a>
-                            </div>
-                        </section>
+                    <div class="s5-p401" id="left-side-bar">
+                        <div class="close-arrow" id="close-arrow">
+                            <a><i class="fa-solid fa-chevron-left" onclick="leftsidenavbar()"></i></a>
+                        </div>
+                        <div class="left-side-nav" >
+                            <a href="#index">Dashboard</a>
+                            <a href="#index" class="active">Demographics</a>
+                            <a href="#index">Insurance</a>
+                            <a href="#index">Case</a>
+                            <a href="#index">Contacts</a>
+                            <a href="#index">Employer</a>
+                            <a href="#index">Appointments</a>
+                            <a href="#index">Encounters</a>
+                            <a href="#index">Documents</a>
+                            <a href="#index">Notes & Alerts</a>
+                            <a href="#index">Forms</a>
+                            <a href="#index">Consents</a>
+                            <a href="#index">Reminder Preference</a>
+                            <hr class="separator">
+                            <a href="#index">Allergy</a>
+                            <a href="#index">Diagnosis</a>
+                            <a href="#index">Family History</a>
+                            <a href="#index">Prescription</a>
+                            <a href="#index">Lab</a>
+                            <a href="#index">Immunization</a>
+                            <a href="#index">Vitals</a>
+                            <hr class="separator">
+                            <a href="#index">Authorization</a>
+                            <a href="#index">Claims</a>
+                            <a href="#index">Receipt</a>
+                            <a href="#index">Open Credit</a>
+                            <a href="#index">Statements</a>
+                            <a href="#index">Ledger</a>
+                        </div>
                     </div>
                     <!-- 4.2 -->
                     <div class="s4-p402">
@@ -177,7 +176,7 @@
                                             
                                             <div class="srow-fcolumn-2">
                                                 <div class="left-text">
-                                                    <label for="Prefix">Prefix<span style="color: red; font-size: 1rem;">*</span>:</label>
+                                                    <label for="Prefix">Prefix:</label>
                                                 </div>
                                                 <div class="right-box">
                                                     <input type="text" id="Prefix" class="text-box-in" name="Prefix" value="Mr">
@@ -509,7 +508,7 @@
                                         <div class="trow-input" id="multiaddress">
                                             <div class="fcolumn address">
                                                 <fieldset class="field-column">
-                                                    <legend class="leg-column" >
+                                                    <legend class="leg-column" style="margin-left: 0.4rem;" >
                                                         <select name="" id="" class="select-option">
                                                             <option value="">Home</option>
                                                             <option value="">Work</option>
@@ -517,87 +516,95 @@
                                                         </select>
                                                     </legend>
                                                     <div class="contact-container">
-                                                        <div  style="justify-content: space-between; margin-bottom: 0.5rem;">
+                                                        <div  style="justify-content: space-between; margin: 0.5rem;">
                                                             <div>
-                                                                <span style="color: black; font-size: 0.9rem; font-weight: 600; padding: 0.4%;">Address</span>
+                                                                <span style="color: black; font-size: 0.9rem; font-weight: 600;">Address</span>
+                                                                <spam><a href="#index"><i class="fa-solid fa-circle-plus" onclick="addaddrField()"></i></a></spam>
                                                                 <a href="#index" style="float: right;"><i class="fa-solid fa-trash-can" onclick="removeAddressField(this)"></i></a>
                                                             </div>
                                                         </div>
-                                                        <div class="street-field" style="width: 66%; margin: 1.25% 0%">
-                                                            <div style="margin: 0.5rem;">
-                                                                <label for="Street">Street</label>
-                                                            </div>
-                                                            <div>
-                                                                <input type="text" class="text-box-in" id="Street" name="Street" placeholder="221 N Shaw Ave" value="221 N Shaw Ave">
+                                                        <div class="addrSection">
+                                                            <div class="multiaddr" id="multiaddr">
+                                                                <div class="singleaddr">
+                                                                    <div class="street-field" style="flex-direction: column;">
+                                                                        <div style="margin: 0.5rem; width: 66%;">
+                                                                            <label for="Street">Street</label>
+                                                                        </div>
+                                                                        <div style="margin: 0.5rem; width: 66%;">
+                                                                            <input type="text" class="text-box-in" id="Street" name="Street" placeholder="221 N Shaw Ave" value="221 N Shaw Ave">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="zip-row" style="flex-direction: row;">
+                                                                        <div class="zip-rowcolumn" style="margin: 0.5rem;">
+                                                                            <div >
+                                                                                <label for="Zip">Zip</label>
+                                                                            </div>
+                                                                            <div>
+                                                                                <input type="text" class="text-box-in" style="margin: 0%;" id="Zip" name="Zip" placeholder="93727" value="93727">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="zip-rowcolumn" style="margin: 0.5rem;">
+                                                                            <div>
+                                                                                <label for="City">City</label>
+                                                                            </div>
+                                                                            <div>
+                                                                                <input type="text" class="text-box-in" style="margin: 0%;" id="City" name="City" placeholder="">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="zip-rowcolumn" style="margin: 0.5rem;">
+                                                                            <div>
+                                                                                <label for="State">State</label>
+                                                                            </div>
+                                                                            <div>
+                                                                                <select name="State" id="State" class="text-box-dropdown" style="margin: 0%;">
+                                                                                    <option value="CALIFORNIA">CALIFORNIA</option>
+                                                                                    <option value="Washington">Washington</option>
+                                                                                    <option value="CALIFORNIA">CALIFORNIA</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="zip-rowcolumn" style="margin: 0.5rem;">
+                                                                            <div>
+                                                                                <label for="Country" >Country</label>
+                                                                            </div>
+                                                                            <div>
+                                                                                <select name="Country" id="Country" class="text-box-dropdown" style="margin: 0%;">
+                                                                                    <option value="US">US</option>
+                                                                                    <option value="INDIA">INDIA</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="zip-rowcolumn" style="margin: 0.5rem; width:5%">
+                                                                            <a href="#index" style="float: right;"><i class="fa-solid fa-trash-can" onclick="removeaddrField(this)"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                
                                                             </div>
                                                         </div>
-                                                        <div>
-                                                            <div class="zip-row2" >
-                                                                <div class="zip-rowcolumn" style="margin: 0.5rem;">
-                                                                    <div >
-                                                                        <label for="Zip">Zip</label>
-                                                                    </div>
-                                                                    <div>
-                                                                        <input type="text" class="text-box-in" style="margin: 0%;" id="Zip" name="Zip" placeholder="93727" value="93727">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="zip-rowcolumn" style="margin: 0.5rem;">
-                                                                    <div>
-                                                                        <label for="City">City</label>
-                                                                    </div>
-                                                                    <div>
-                                                                        <input type="text" class="text-box-in" style="margin: 0%;" id="City" name="City" placeholder="">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="zip-rowcolumn" style="margin: 0.5rem;">
-                                                                    <div>
-                                                                        <label for="State">State</label>
-                                                                    </div>
-                                                                    <div>
-                                                                        <select name="State" id="State" class="text-box-dropdown" style="margin: 0%;">
-                                                                            <option value="CALIFORNIA">CALIFORNIA</option>
-                                                                            <option value="Washington">Washington</option>
-                                                                            <option value="CALIFORNIA">CALIFORNIA</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="zip-rowcolumn" style="margin: 0.5rem;">
-                                                                    <div>
-                                                                        <label for="Country" >Country</label>
-                                                                    </div>
-                                                                    <div>
-                                                                        <select name="Country" id="Country" class="text-box-dropdown" style="margin: 0%;">
-                                                                            <option value="US">US</option>
-                                                                            <option value="INDIA">INDIA</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="zip-rowcolumn" style="margin: 0.5rem; width:5%">
-                                                                    <a href="#index" style="float: right;"><i class="fa-solid fa-trash-can"></i></a>
+                                                        <div class="phoneSection" >
+                                                            <div >
+                                                                <div style="margin: 0.5rem;">
+                                                                    <div>Phone<a href="#index"><i class="fa-solid fa-circle-plus" onclick="addPhoneField(this)"></i></a></div>
                                                                 </div>
                                                             </div>
-                                                            <div  >
-                                                                <div >
-                                                                    <div style="margin: 0.5rem;">
-                                                                        <div>Phone<a href="#index"><i class="fa-solid fa-circle-plus"></i></a></div>
+                                                            <div class="phone-row3">
+                                                                <div class="phone-rows1" style="margin: 0.25rem 0.5rem 0.25rem 0.5rem;">
+                                                                    <div style="width: 10%;">
+                                                                        <label for="Type">Type</label>
+                                                                    </div>
+                                                                    <div style="width: 13%; margin:0% 1.25%;">
+                                                                        <label for="Code">Code</label>
+                                                                    </div>
+                                                                    <div style="width: 30%; margin:0% 1.25%;"> 
+                                                                        <label for="Number">Number</label>
+                                                                    </div>
+                                                                    <div style="width: 20%; margin:0% 1.25%;">
+                                                                        <label for="Ext.">Ext.</label>
                                                                     </div>
                                                                 </div>
-                                                                <div class="phone-row3">
-                                                                    <div class="phone-rows1" style="margin: 0.25rem 0.5rem 0.25rem 0.5rem;">
-                                                                        <div style="width: 10%;">
-                                                                            <label for="Type">Type</label>
-                                                                        </div>
-                                                                        <div style="width: 13%; margin:0% 1.25%;">
-                                                                            <label for="Code">Code</label>
-                                                                        </div>
-                                                                        <div style="width: 30%; margin:0% 1.25%;"> 
-                                                                            <label for="Number">Number</label>
-                                                                        </div>
-                                                                        <div style="width: 20%; margin:0% 1.25%;">
-                                                                            <label for="Ext.">Ext.</label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="phone-rows2" style="margin-left: 0.5rem;">
+                                                                <div class="multiPhone" id="multiPhone">
+                                                                    <div class="singlePhone" style="margin: 0rem 0rem 0.5rem 0.5rem;">
                                                                         <div style="width: 10%;">
                                                                             <select name="Type" id="Type" class="text-box-dropdown">
                                                                                 <option value="Cell">Cell</option>
@@ -617,27 +624,29 @@
                                                                         <div style="width: 20%; margin:0% 1.25%;">
                                                                         </div>
                                                                         <div style="width: 10%; margin:0% 1.25%;">
-                                                                            <a href="#index" style="float: right;"><i class="fa-solid fa-trash-can"></i></a>
+                                                                            <a href="#index" style="float: right;"><i class="fa-solid fa-trash-can" onclick="removePhoneField(this)"></i></a>
                                                                         </div>
-                                                                    </div>
+                                                                    </div> 
                                                                 </div>
                                                             </div>
-                                                            <div >
-                                                                <div>
-                                                                    <div style="margin: 0.5rem;">
-                                                                        <div>Fax<a href="#index"><i class="fa-solid fa-circle-plus"></i></a></div>
+                                                        </div>
+                                                        <div class="faxSection">
+                                                            <div>
+                                                                <div style="margin: 0.5rem;">
+                                                                    <div>Fax<a href="#index"><i class="fa-solid fa-circle-plus" onclick="addFaxField(this)"></i></a></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="fax-row4">
+                                                                <div class="fax-rows1" style="margin: 0.25rem 0.5rem 0.25rem 0.5rem;">
+                                                                    <div style="width: 10%;">
+                                                                        <label for="Code">Code</label>
+                                                                    </div>
+                                                                    <div style="width: 30%; margin:0% 1.25%;">
+                                                                        <label for="Number">Number</label>
                                                                     </div>
                                                                 </div>
-                                                                <div class="fax-row4">
-                                                                    <div class="fax-rows1" style="margin: 0.25rem 0.5rem 0.25rem 0.5rem;">
-                                                                        <div style="width: 10%;">
-                                                                            <label for="Code">Code</label>
-                                                                        </div>
-                                                                        <div style="width: 30%; margin:0% 1.25%;">
-                                                                            <label for="Number">Number</label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="fax-rows2" style="margin-left: 0.5rem;">
+                                                                <div class="multiFax" id="multiFax">
+                                                                    <div class="singleFax" style="margin: 0rem 0rem 0.5rem 0.5rem;">
                                                                         <div style="width: 10%;">
                                                                             <input type="text" class="text-box-in" id="Code" name="Code" placeholder="+91" value="+91">
                                                                         </div>
@@ -645,13 +654,12 @@
                                                                             <input type="text" class="text-box-in" id="Number" name="Number" placeholder="(971) 222-9147" value="(971) 222-9147">
                                                                         </div>
                                                                         <div style="width: 30%; margin:0% 2.5%;">
-                                                                            <a href="#index"  style="float: right;"><i class="fa-solid fa-trash-can"></i></a>
+                                                                            <a href="#index"  style="float: right;"><i class="fa-solid fa-trash-can" onclick="removeFaxField(this)"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        
                                                         <div class="emailSection" >
                                                             <div>
                                                                 <div style="margin: 0.5rem;">
@@ -692,7 +700,7 @@
                                             </div>
                                             <div class="fcolumn address">
                                                 <fieldset class="field-column">
-                                                    <legend class="leg-column" >
+                                                    <legend class="leg-column" style="margin-left: 0.4rem;" >
                                                         <select name="" id="" class="select-option">
                                                             <option value="">Home</option>
                                                             <option value="">Work</option>
@@ -700,87 +708,95 @@
                                                         </select>
                                                     </legend>
                                                     <div class="contact-container">
-                                                        <div  style="justify-content: space-between; margin-bottom: 0.5rem;">
+                                                        <div  style="justify-content: space-between; margin: 0.5rem;">
                                                             <div>
-                                                                <span style="color: black; font-size: 0.9rem; font-weight: 600; padding: 0.4%;">Address</span>
+                                                                <span style="color: black; font-size: 0.9rem; font-weight: 600;">Address</span>
+                                                                <spam><a href="#index"><i class="fa-solid fa-circle-plus" onclick="addaddrField()"></i></a></spam>
                                                                 <a href="#index" style="float: right;"><i class="fa-solid fa-trash-can" onclick="removeAddressField(this)"></i></a>
                                                             </div>
                                                         </div>
-                                                        <div class="street-field" style="width: 66%; margin: 1.25% 0%">
-                                                            <div style="margin: 0.5rem;">
-                                                                <label for="Street">Street</label>
-                                                            </div>
-                                                            <div>
-                                                                <input type="text" class="text-box-in" id="Street" name="Street" placeholder="221 N Shaw Ave" value="221 N Shaw Ave">
+                                                        <div class="addrSection">
+                                                            <div class="multiaddr" id="multiaddr">
+                                                                <div class="singleaddr">
+                                                                    <div class="street-field" style="flex-direction: column;">
+                                                                        <div style="margin: 0.5rem; width: 66%;">
+                                                                            <label for="Street">Street</label>
+                                                                        </div>
+                                                                        <div style="margin: 0.5rem; width: 66%;">
+                                                                            <input type="text" class="text-box-in" id="Street" name="Street" placeholder="221 N Shaw Ave" value="221 N Shaw Ave">
+                                                                        </div>
+                                                                    </div>
+                                                                    <div class="zip-row" style="flex-direction: row;">
+                                                                        <div class="zip-rowcolumn" style="margin: 0.5rem;">
+                                                                            <div >
+                                                                                <label for="Zip">Zip</label>
+                                                                            </div>
+                                                                            <div>
+                                                                                <input type="text" class="text-box-in" style="margin: 0%;" id="Zip" name="Zip" placeholder="93727" value="93727">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="zip-rowcolumn" style="margin: 0.5rem;">
+                                                                            <div>
+                                                                                <label for="City">City</label>
+                                                                            </div>
+                                                                            <div>
+                                                                                <input type="text" class="text-box-in" style="margin: 0%;" id="City" name="City" placeholder="">
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="zip-rowcolumn" style="margin: 0.5rem;">
+                                                                            <div>
+                                                                                <label for="State">State</label>
+                                                                            </div>
+                                                                            <div>
+                                                                                <select name="State" id="State" class="text-box-dropdown" style="margin: 0%;">
+                                                                                    <option value="CALIFORNIA">CALIFORNIA</option>
+                                                                                    <option value="Washington">Washington</option>
+                                                                                    <option value="CALIFORNIA">CALIFORNIA</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="zip-rowcolumn" style="margin: 0.5rem;">
+                                                                            <div>
+                                                                                <label for="Country" >Country</label>
+                                                                            </div>
+                                                                            <div>
+                                                                                <select name="Country" id="Country" class="text-box-dropdown" style="margin: 0%;">
+                                                                                    <option value="US">US</option>
+                                                                                    <option value="INDIA">INDIA</option>
+                                                                                </select>
+                                                                            </div>
+                                                                        </div>
+                                                                        <div class="zip-rowcolumn" style="margin: 0.5rem; width:5%">
+                                                                            <a href="#index" style="float: right;"><i class="fa-solid fa-trash-can" onclick="removeaddrField(this)"></i></a>
+                                                                        </div>
+                                                                    </div>
+                                                                </div>
+                                                                
                                                             </div>
                                                         </div>
-                                                        <div>
-                                                            <div class="zip-row2" >
-                                                                <div class="zip-rowcolumn" style="margin: 0.5rem;">
-                                                                    <div >
-                                                                        <label for="Zip">Zip</label>
-                                                                    </div>
-                                                                    <div>
-                                                                        <input type="text" class="text-box-in" style="margin: 0%;" id="Zip" name="Zip" placeholder="93727" value="93727">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="zip-rowcolumn" style="margin: 0.5rem;">
-                                                                    <div>
-                                                                        <label for="City">City</label>
-                                                                    </div>
-                                                                    <div>
-                                                                        <input type="text" class="text-box-in" style="margin: 0%;" id="City" name="City" placeholder="">
-                                                                    </div>
-                                                                </div>
-                                                                <div class="zip-rowcolumn" style="margin: 0.5rem;">
-                                                                    <div>
-                                                                        <label for="State">State</label>
-                                                                    </div>
-                                                                    <div>
-                                                                        <select name="State" id="State" class="text-box-dropdown" style="margin: 0%;">
-                                                                            <option value="CALIFORNIA">CALIFORNIA</option>
-                                                                            <option value="Washington">Washington</option>
-                                                                            <option value="CALIFORNIA">CALIFORNIA</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="zip-rowcolumn" style="margin: 0.5rem;">
-                                                                    <div>
-                                                                        <label for="Country" >Country</label>
-                                                                    </div>
-                                                                    <div>
-                                                                        <select name="Country" id="Country" class="text-box-dropdown" style="margin: 0%;">
-                                                                            <option value="US">US</option>
-                                                                            <option value="INDIA">INDIA</option>
-                                                                        </select>
-                                                                    </div>
-                                                                </div>
-                                                                <div class="zip-rowcolumn" style="margin: 0.5rem; width:5%">
-                                                                    <a href="#index" style="float: right;"><i class="fa-solid fa-trash-can"></i></a>
+                                                        <div class="phoneSection" >
+                                                            <div >
+                                                                <div style="margin: 0.5rem;">
+                                                                    <div>Phone<a href="#index"><i class="fa-solid fa-circle-plus" onclick="addPhoneField(this)"></i></a></div>
                                                                 </div>
                                                             </div>
-                                                            <div  >
-                                                                <div >
-                                                                    <div style="margin: 0.5rem;">
-                                                                        <div>Phone<a href="#index"><i class="fa-solid fa-circle-plus"></i></a></div>
+                                                            <div class="phone-row3">
+                                                                <div class="phone-rows1" style="margin: 0.25rem 0.5rem 0.25rem 0.5rem;">
+                                                                    <div style="width: 10%;">
+                                                                        <label for="Type">Type</label>
+                                                                    </div>
+                                                                    <div style="width: 13%; margin:0% 1.25%;">
+                                                                        <label for="Code">Code</label>
+                                                                    </div>
+                                                                    <div style="width: 30%; margin:0% 1.25%;"> 
+                                                                        <label for="Number">Number</label>
+                                                                    </div>
+                                                                    <div style="width: 20%; margin:0% 1.25%;">
+                                                                        <label for="Ext.">Ext.</label>
                                                                     </div>
                                                                 </div>
-                                                                <div class="phone-row3">
-                                                                    <div class="phone-rows1" style="margin: 0.25rem 0.5rem 0.25rem 0.5rem;">
-                                                                        <div style="width: 10%;">
-                                                                            <label for="Type">Type</label>
-                                                                        </div>
-                                                                        <div style="width: 13%; margin:0% 1.25%;">
-                                                                            <label for="Code">Code</label>
-                                                                        </div>
-                                                                        <div style="width: 30%; margin:0% 1.25%;"> 
-                                                                            <label for="Number">Number</label>
-                                                                        </div>
-                                                                        <div style="width: 20%; margin:0% 1.25%;">
-                                                                            <label for="Ext.">Ext.</label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="phone-rows2" style="margin-left: 0.5rem;">
+                                                                <div class="multiPhone" id="multiPhone">
+                                                                    <div class="singlePhone" style="margin: 0rem 0rem 0.5rem 0.5rem;">
                                                                         <div style="width: 10%;">
                                                                             <select name="Type" id="Type" class="text-box-dropdown">
                                                                                 <option value="Cell">Cell</option>
@@ -800,27 +816,29 @@
                                                                         <div style="width: 20%; margin:0% 1.25%;">
                                                                         </div>
                                                                         <div style="width: 10%; margin:0% 1.25%;">
-                                                                            <a href="#index" style="float: right;"><i class="fa-solid fa-trash-can"></i></a>
+                                                                            <a href="#index" style="float: right;"><i class="fa-solid fa-trash-can" onclick="removePhoneField(this)"></i></a>
                                                                         </div>
-                                                                    </div>
+                                                                    </div> 
                                                                 </div>
                                                             </div>
-                                                            <div >
-                                                                <div>
-                                                                    <div style="margin: 0.5rem;">
-                                                                        <div>Fax<a href="#index"><i class="fa-solid fa-circle-plus"></i></a></div>
+                                                        </div>
+                                                        <div class="faxSection">
+                                                            <div>
+                                                                <div style="margin: 0.5rem;">
+                                                                    <div>Fax<a href="#index"><i class="fa-solid fa-circle-plus" onclick="addFaxField(this)"></i></a></div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="fax-row4">
+                                                                <div class="fax-rows1" style="margin: 0.25rem 0.5rem 0.25rem 0.5rem;">
+                                                                    <div style="width: 10%;">
+                                                                        <label for="Code">Code</label>
+                                                                    </div>
+                                                                    <div style="width: 30%; margin:0% 1.25%;">
+                                                                        <label for="Number">Number</label>
                                                                     </div>
                                                                 </div>
-                                                                <div class="fax-row4">
-                                                                    <div class="fax-rows1" style="margin: 0.25rem 0.5rem 0.25rem 0.5rem;">
-                                                                        <div style="width: 10%;">
-                                                                            <label for="Code">Code</label>
-                                                                        </div>
-                                                                        <div style="width: 30%; margin:0% 1.25%;">
-                                                                            <label for="Number">Number</label>
-                                                                        </div>
-                                                                    </div>
-                                                                    <div class="fax-rows2" style="margin-left: 0.5rem;">
+                                                                <div class="multiFax" id="multiFax">
+                                                                    <div class="singleFax" style="margin: 0rem 0rem 0.5rem 0.5rem;">
                                                                         <div style="width: 10%;">
                                                                             <input type="text" class="text-box-in" id="Code" name="Code" placeholder="+91" value="+91">
                                                                         </div>
@@ -828,13 +846,12 @@
                                                                             <input type="text" class="text-box-in" id="Number" name="Number" placeholder="(971) 222-9147" value="(971) 222-9147">
                                                                         </div>
                                                                         <div style="width: 30%; margin:0% 2.5%;">
-                                                                            <a href="#index"  style="float: right;"><i class="fa-solid fa-trash-can"></i></a>
+                                                                            <a href="#index"  style="float: right;"><i class="fa-solid fa-trash-can" onclick="removeFaxField(this)"></i></a>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
-                                                        
                                                         <div class="emailSection" >
                                                             <div>
                                                                 <div style="margin: 0.5rem;">
@@ -963,11 +980,11 @@
                                     <section class="firow">
                                         <section class="row-1">
                                             <div>
-                                                <div style="font-size: 1.4rem"><a href="#index"><i class="fa-sharp fa-solid fa-square-caret-down"></i></a> Other Details</div>
+                                                <div style="font-size: 1.4rem"><a href="#index"><i class="fa-solid fa-circle-chevron-down" onclick="detailsection()"></i></a> Other Details</div>
                                             </div>
                                         </section>
                                         
-                                        <section class="row-2">
+                                        <section class="row-2" id="row2section">
                                             <div class="fcolumn">
                                                 <div class="column-1">
                                                     <div class="left-text">
@@ -997,7 +1014,7 @@
                                                         <label for="Deceased Time">Deceased Time:</label>
                                                     </div>
                                                     <div class="right-box">
-                                                        <input type="text" id="Deceased Time" name="Deceased Time" value=" " disabled>
+                                                        <input type="text" id="Deceased Time" class="text-box-in" style="background-color: #e8ebed; cursor: not-allowed;" name="Deceased Time" value=" " disabled>
                                                     </div>
                                                 </div>
                                                 <div class="column-1">
@@ -1036,7 +1053,8 @@
                                                         <label for="sname">Note:</label>
                                                     </div>
                                                     <div class="right-box">
-                                                        <input type="text" id="sname" class="text-box-in" name="sname" value="Marty">
+                                                        <textarea type="text" id="note" class="text-box-in" name="note" value="Marty"></textarea>
+                                                        <!-- <input  id="sname" class="text-box-in" name="sname" value="Marty"> -->
                                                     </div>
                                                 </div>
                                             </div>
@@ -1134,7 +1152,7 @@
                                                     </div>
                                                     <div class="right-box">
                                                         <input type="checkbox" id="Deceased" name="Deceased" value="Deceased">
-                                                        <input type="text" id="Deceased" class="text-box-in" name="Deceased" value=" " disabled>
+                                                        <input type="text" id="Deceased" class="text-box-in" style="background-color: #e8ebed; cursor: not-allowed; width: 93%;" name="Deceased" value=" " disabled>
                                                     </div>
                                                 </div>
                                                 <div class="column-1">

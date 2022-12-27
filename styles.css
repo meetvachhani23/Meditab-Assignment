@@ -54,6 +54,10 @@ body{
     float: left;
 }
 
+.top-nav-left a{
+    padding: 0% 1.5% 0% 1.5%;
+}
+
 .top-nav-right{
     margin: 0.1%;
     display: flex;
@@ -62,19 +66,25 @@ body{
     /* flex-direction: right; */
 }
 
+.top-nav-right a{
+    padding: 0% 1% 0% 1%;
+}
+
 .top-nav-right .search-patient-box{
     margin-right: 1%;
     margin-left: 1%;
-    margin-bottom: 1%;
-    margin-top: 2%;
+    margin-bottom: 3%;
+    margin-top: 3%;
     border: 1px solid #b0becb;
     color: #243b53;
     border-radius: 6rem;
     padding: 0.5rem;
     box-shadow: none;
     background: transparent;
-    width: 80%;
+    width: 100%;
+    height: 60%;
 }
+
 
 .s2-p102{
     height: 95%;
@@ -223,13 +233,13 @@ body{
     display: flex;
 }
 
-.left-side-nav-scroll {
+/* .left-side-nav-scroll {
     /* margin-right: 0.5rem; */
-    width: 2.5%;
+    /*width: 2.5%;
     height: 100%;
     display: flex;
     float: right;
-}
+} */
 
 .left-side-nav{
     width: 97.5%;
@@ -260,6 +270,18 @@ body{
     font-weight: 600;
 }
 
+.s5-p401 .close-arrow {
+    display: flex;
+    float: right;
+    position: absolute;
+    justify-content: end;
+    width: 9.5%;
+    height: 100%;
+    cursor: pointer;
+    padding-top: 0.2%;
+    z-index: 1;    
+}
+
 .separator{
     margin: 0.5rem;
 }
@@ -279,6 +301,7 @@ body{
     /* float: right; */
     justify-content: end;
     padding: 0.5%;
+    /* box-shadow: 0px 3px 4px #888888; */
 }
 .frow{
     display: flex;
@@ -300,7 +323,7 @@ body{
 
 .form-s5-p502{
     /* border: 1px solid black; */
-    height: 93.5%;
+    height: 92%;
     width: 100%;
     overflow-y: scroll;
     overflow-x: hidden;
@@ -472,6 +495,7 @@ body{
     box-shadow: none;
     background: transparent;
 }
+/* third box */
 
 .trow{
     display: flex;
@@ -482,11 +506,29 @@ body{
     border-radius: 0.4rem;
 }
 
+.trow a{
+    /* display: block; */
+    /* font-size: 1.4rem; */
+    text-align: center;
+    color: #627d98;
+    /* margin-top: 2%; */
+    /* margin-bottom: 2%; */
+    margin-left: 0.75%;
+    margin-right: 0.75%;
+    text-decoration: none;
+}
+
+.trow .trow-1{
+    width: 100%;
+}
 .trow .trow-101{
     padding-left: 1%;
     padding-top: 0.5%;
     width: 100%;
     font-weight: 700;
+}
+.trow .trow-101 a:hover{
+    color: #5a5fe2; 
 }
 
 .trow .trow-102{
@@ -495,15 +537,25 @@ body{
     width: 100%;
     font-size: 0.9rem;
 }
+
+.trow .trow-102:hover{
+    color: #000000; 
+}
+
 .trow .trow-input{
-    width: 50%;
+    /* width: 50%; */
     max-width: 100%;
     min-width: 40%;
+    display: flex;
+    flex-flow: row;
+    margin: 1%;
+    width: 98%;
+    /* height: 100%; */
 }
 
 .trow .trow-input .fieldset{
     padding: 1rem;
-    border: 1px solid var(--border-color);
+    border: 1px solid #cbcdec;
 }
 
 .trow .trow-input .fieldset .legend{
@@ -513,7 +565,7 @@ body{
 
 .trow .trow-input .select-option{
     width: 10rem;
-    /* width: 96%; */
+    width: 96%;
     font-size: 0.7rem;
     margin: 0.5% 0%;
     border: 1px solid #b0becb;
@@ -524,75 +576,52 @@ body{
     background: transparent;
 }
 
-.trow .trow-101 a:hover{
-    color: #5a5fe2; 
-}
-.trow .trow-102:hover{
-    color: #000000; 
-}
-.trow a{
-    /* display: block; */
-    /* font-size: 1.4rem; */
-    text-align: center;
-    color: #627d98;
-    margin-top: 2%;
-    margin-bottom: 2%;
-    margin-left: 0.75%;
-    margin-right: 0.75%;
-    text-decoration: none;
-}
-
-.trow .trow-input{
-    display: flex;
-    flex-flow: row;
-    margin: 1%;
-    width: 98%;
-}
-
 .trow .fcolumn{
     display: flex;
     float: left;
     flex-flow: column;
     border: 5px;
-    width: 50%;
+    width: 100%;
+    /* height: 100%; */
 }
-/* .trow .scolumn{
-    display: flex;
-    flex-flow: column;
-    border: 5px;
-} */
 
 .trow .field-column{
     display: flex;
+    height: 100%;
 }
-
-/* 
-.trow .leg-column{
-
-} */
-.trow .fcolumn {
-    width: 100%;
-    /* flex-flow: row; */
-}
-
-/* .trow .fcolumn .heading{
-    display: flex;
-    /* flex-flow: column; */
-    /* width: 100%; */
-/* }  */
-
 
 .trow .contact-container{
+    display: flex;
+    flex-direction: column;
     width: 100%;
 }
-.trow .zip-row2{
+
+.trow .multiaddr{
     display: flex;
-    flex-direction: row;
-    width: 96%;
+    flex-direction: column;
+    width: 98%;
     /* justify-content: center; */
 }
 
+.trow .singleaddr{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.trow .singleaddr .street-field{
+    display: flex;
+    width: 100%;
+}
+
+.trow .singleaddr .zip-row{
+    display: flex;
+    width: 100%;
+}
+
 .trow .zip-rowcolumn{
+    display: flex;
+    flex-direction: column;
     width: 25%;
 }
 .trow .phone-row3{
@@ -608,7 +637,7 @@ body{
     border-bottom: 1px solid black;
 }
 
-.trow .phone-rows2{
+.trow .singlePhone{
     display: flex;
     width: 96%;
 }
@@ -626,7 +655,7 @@ body{
     border-bottom: 1px solid black;
 }
 
-.trow .fax-rows2 {
+.trow .singleFax {
     display: flex;
     width: 96%;
 }
@@ -792,6 +821,7 @@ table{
     flex-flow: column;
     background-color: #ffffff;
     width: 100%;
+    /* height: 100%; */
     justify-content: space-between;
     border-radius: 0.4rem;
 }

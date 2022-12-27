@@ -1,5 +1,6 @@
 const form = document.getElementById("s-form");
 
+// Calcualte Age
 function ageCalculator() 
 {
     event.preventDefault();
@@ -19,7 +20,7 @@ function ageCalculator()
         
         var age = Math.abs(year - 1970);  
         
-        if(1)
+        if(age > 18)
         {   
             
             const myFormData = new FormData(form);
@@ -38,12 +39,39 @@ function ageCalculator()
     {  
         alert("Please Enter All the required Details");
     }  
-}  
+}
 
+//reset fill input
 function resetFunction() 
 {
     document.getElementById("s-form").reset();
 }
+
+
+//left side bar
+function leftsidenavbar() {
+    var leftsidebar = document.getElementById("left-side-bar");
+    var closearrow = document.getElementById("close-arrow");
+    if (leftsidebar.style.width === "11%") {
+      leftsidebar.style.width = "1%";
+      closearrow.style.width = "0.5%";
+    } else {
+      leftsidebar.style.width = "11%";
+      closearrow.style.width = "9.5%";
+    }
+  }
+
+// //close side bar  
+// function closeNav() {
+//     document.getElementById("left-side-bar").style.width = "1%";
+//     document.getElementById("main").style.marginLeft= "0";
+// }
+// //open side bar
+// function openNav() {
+//     document.getElementById("left-side-bar").style.width = "11%";
+//     document.getElementById("main").style.marginLeft = "11%";
+// }
+
 
 // address box
 // address box add
@@ -241,6 +269,133 @@ function removeAddressField(btn) {
     btn.closest('.address').remove();
 }
 
+
+//address part
+//address part add
+function addaddrField(add) {
+    addrHTML = `<div class="singleaddr">
+    <div class="street-field" style="flex-direction: column;">
+        <div style="margin: 0.5rem; width: 66%;">
+            <label for="Street">Street</label>
+        </div>
+        <div style="margin: 0.5rem; width: 66%;">
+            <input type="text" class="text-box-in" id="Street" name="Street" placeholder="221 N Shaw Ave" value="221 N Shaw Ave">
+        </div>
+    </div>
+    <div class="zip-row" style="flex-direction: row;">
+        <div class="zip-rowcolumn" style="margin: 0.5rem;">
+            <div >
+                <label for="Zip">Zip</label>
+            </div>
+            <div>
+                <input type="text" class="text-box-in" style="margin: 0%;" id="Zip" name="Zip" placeholder="93727" value="93727">
+            </div>
+        </div>
+        <div class="zip-rowcolumn" style="margin: 0.5rem;">
+            <div>
+                <label for="City">City</label>
+            </div>
+            <div>
+                <input type="text" class="text-box-in" style="margin: 0%;" id="City" name="City" placeholder="">
+            </div>
+        </div>
+        <div class="zip-rowcolumn" style="margin: 0.5rem;">
+            <div>
+                <label for="State">State</label>
+            </div>
+            <div>
+                <select name="State" id="State" class="text-box-dropdown" style="margin: 0%;">
+                    <option value="CALIFORNIA">CALIFORNIA</option>
+                    <option value="Washington">Washington</option>
+                    <option value="CALIFORNIA">CALIFORNIA</option>
+                </select>
+            </div>
+        </div>
+        <div class="zip-rowcolumn" style="margin: 0.5rem;">
+            <div>
+                <label for="Country" >Country</label>
+            </div>
+            <div>
+                <select name="Country" id="Country" class="text-box-dropdown" style="margin: 0%;">
+                    <option value="US">US</option>
+                    <option value="INDIA">INDIA</option>
+                </select>
+            </div>
+        </div>
+        <div class="zip-rowcolumn" style="margin: 0.5rem; width:5%">
+            <a href="#index" style="float: right;"><i class="fa-solid fa-trash-can" onclick="removeaddrField(this)"></i></a>
+        </div>
+    </div>
+</div>`
+    // document.getElementById("multiaddr").innerHTML += addrHTML;
+    add.closest('.addrSection').querySelector('.multiaddr').innerHTML += addrHTML;
+}
+
+//address part remove
+function removeaddrField(btn) {
+    btn.closest('.multiaddr').querySelector('.singleaddr').remove();
+    add.closest('.addrSection').querySelector('.multiaddr').innerHTML += addrHTML;
+}
+
+
+// Phone part 
+// Phone part add
+function addPhoneField(add) {
+    phoneHTML = `<div class="singlePhone" style="margin: 0rem 0rem 0.5rem 0.5rem;">
+    <div style="width: 10%;">
+        <select name="Type" id="Type" class="text-box-dropdown">
+            <option value="Cell">Cell</option>
+            <option value="Landline">Landline</option>
+        </select>
+    </div>
+    <div style="width: 13%; margin:0% 1.25%;">
+        <select name="Code" id="Code" class="text-box-dropdown">
+            <option value="CALIFORNIA">+91 India</option>
+            <option value="Washington">+1 United States</option>
+            <option value="CALIFORNIA">+213 Algeria</option>
+        </select>
+    </div>
+    <div style="width: 32%; margin:0%;">
+        <input type="text" id="Number" class="text-box-in" name="Number" placeholder="(707) 322-1076" value="(707) 322-1076">
+    </div>
+    <div style="width: 20%; margin:0% 1.25%;">
+    </div>
+    <div style="width: 10%; margin:0% 1.25%;">
+        <a href="#index" style="float: right;"><i class="fa-solid fa-trash-can" onclick="removePhoneField(this)"></i></a>
+    </div>
+</div>  `
+    // document.getElementById("multiPhone").innerHTML += phoneHTML;
+    add.closest('.phoneSection').querySelector('.multiPhone').innerHTML += phoneHTML;
+}
+// Phone part remove
+function removePhoneField(btn) {
+    btn.closest('.multiPhone').querySelector('.singlePhone').remove();
+}
+
+
+// Fax part 
+// Fax part add
+function addFaxField(add) {
+    faxHTML = `<div class="singleFax" style="margin: 0rem 0rem 0.5rem 0.5rem;">
+    <div style="width: 10%;">
+        <input type="text" class="text-box-in" id="Code" name="Code" placeholder="+91" value="+91">
+    </div>
+    <div style="width: 30%;">
+        <input type="text" class="text-box-in" id="Number" name="Number" placeholder="(971) 222-9147" value="(971) 222-9147">
+    </div>
+    <div style="width: 30%; margin:0% 2.5%;">
+        <a href="#index"  style="float: right;"><i class="fa-solid fa-trash-can" onclick="removeFaxField(this)"></i></a>
+    </div>
+</div>`
+    // document.getElementById("multifax").innerHTML += faxHTML;
+    add.closest('.faxSection').querySelector('.multiFax').innerHTML += faxHTML;
+}
+// Fax part remove
+function removeFaxField(btn) {
+    btn.closest('.multiFax').querySelector('.singleFax').remove();
+}
+
+
 // Email part 
 // Email part add
 function addEmailField(add) {
@@ -259,6 +414,7 @@ function addEmailField(add) {
 function removeEmailField(btn) {
     btn.closest('.multiEmail').querySelector('.singleEmail').remove();
 }
+
 
 // Website part 
 // Website part add
@@ -279,3 +435,13 @@ function addWebsiteField(add) {
 function removeWebsiteField(btn) {
     btn.closest('.multiWebsite').querySelector('.singleWebsite').remove();
 }
+
+//other details
+function detailsection() {
+    var x = document.getElementById("row2section");
+    if (x.style.display === "none") {
+      x.style.display = "flex";
+    } else {
+      x.style.display = "none";
+    }
+  }

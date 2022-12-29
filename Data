@@ -1,31 +1,121 @@
-CREATE SEQUENCE dd; 
-CREATE TABLE ts ( 
-  CHART_NUMBER CHAR(20) NOT NULL DEFAULT to_char(nextval('dd'), 'EMP0000FM'), 
-    FIRST_NAME    VARCHAR(20)   NOT NULL,
-    LAST_NAME     VARCHAR (20)  NOT NULL,
-    MIDDLE_NAME   VARCHAR(20),
-  	SEX VARCHAR(20),
-  	RACE VARCHAR(20),
-    DOB DATE,
-    PRIMARY KEY(CHART_NUMBER)
+--create sequence if not exists SEQ_CHART
+--INCREMENT 1
+--START 1;
+--
+--create sequence if not exists SEQ_PRIMARY
+--INCREMENT 1
+--START 1;
 
+--2
+create table if not exists Patient_table(
+  CHART_NUMBER SERIAL /*CHAR(20)*/ not null, /*default to_char(nextval('SEQ_CHART'),'EMP0000FM'),*/
+  PATIENT_ID SERIAL /*CHAR(20)*/ primary key not null, /*default to_char(nextval('SEQ_PRIMARY'),'EMMP0000FM'),*/
+  FIRST_NAME VARCHAR(20) not null ,
+  LAST_NAME VARCHAR(20) not null,
+  MIDDLE_NAME VARCHAR(20),
+  SEX INT references Sex_table(SEX_ID),
+--  RACE VARCHAR(20),
+  DOB DATE
+--  PRIMARY KEY(CHART_NUMBER)
 );
-INSERT INTO ts(FIRST_NAME,LAST_NAME,MIDDLE_NAME,SEX) VALUES('NIKITA','MIRCHANDANI','M','FEMALE');
-select * from ts;
- 
-CREATE TABLE ADDRESS(
-  ADDRESS_ID SERIAL PRIMARY KEY,
-  ADDRESS_TYPE VARCHAR(20) NOT NULL,
-  STREET VARCHAR(20) ,
-  CITY VARCHAR(20),
-  ZIP INT,
-  STATE VARCHAR(20),
-  COUNTRY VARCHAR(20),
-  CHART_NUMBER VARCHAR(20),
-  CONSTRAINT user_id FOREIGN KEY(CHART_NUMBER)
-        REFERENCES ts(CHART_NUMBER)
-  );
-  
-  INSERT INTO ADDRESS(ADDRESS_TYPE,STREET,CITY,ZIP,CHART_NUMBER) VALUES('HOME','STREET','NADIAD',387630,'EMP0001');
+--
+--insert into Patient_table (FIRST_NAME,LAST_NAME,MIDDLE_NAME,DOB) VALUES ('meet','patel','M','2020-11-23');
+--insert into Patient_table (FIRST_NAME,LAST_NAME,MIDDLE_NAME,DOB) VALUES ('meet','patel','M','2020-11-23');
+--select * from Patient_table;
 
-select * from address;
+--4
+create table if not exists Address_table(
+    ADDRESS_ID SERIAL primary key,  
+    PATIENT_ID SERIAL references Patient_table(PATIENT_ID),
+    ADDRESS_TYPE INT references Address_type_table(ADDRESS_TYPE_ID),
+    STREET VARCHAR(80),
+    CITY VARCHAR(80),
+    ZIP VARCHAR(80),
+    STATE VARCHAR(80), 
+    COUNTRY VARCHAR(80), 
+    PRIM BOOLEAN  default 'TRUE'
+);
+
+--6
+create table if not exists Phone_table(
+	PHONE_ID SERIAL primary key,
+	ADDRESS_ID SERIAL references Address_table(ADDRESS_ID),
+	PHONE_NUM INT,
+	PHONE_TYPE INT references Phone_type_table(PHONE_TYPE_ID),
+	PRIM_PHONE BOOLEAN default 'TRUE'
+);
+
+--7
+create table if not exists Fax_table(
+	FAX_ID SERIAL primary key,
+	ADDRESS_ID SERIAL references Address_table(ADDRESS_ID),
+	FAX_NUM INT,
+	PRIM_FAX BOOLEAN default 'TRUE'
+);
+
+--1
+create table if not exists Sex_table(
+	SEX_ID SERIAL primary key,
+--	PATIENT_ID SERIAL
+	SEX_TYPE VARCHAR(80) not null
+);
+
+--9
+create table if not exists Race_table(
+	RACE_ID SERIAL primary key,
+	PATIENT_ID SERIAL references Patient_table(PATIENT_ID),
+	RACE_TYPE INT references Race_type_table(RACE_TYPE_ID) 
+);
+
+
+--create table if not exists Address_type_table(
+--	ADDRESS_TYPE_ID SERIAL primary key,
+----	ADDRESS_ID SERIAL
+--	ADDRESS_TYPE VARCHAR(80) not null
+--);
+
+--5
+create table if not exists Phone_type_table(
+	PHONE_TYPE_ID SERIAL primary key,
+--	PHONE_ID SERIAL
+	PHONE_TYPE VARCHAR(80) not null
+);
+
+--3
+create table if not exists Address_type_table(
+	ADDRESS_TYPE_ID SERIAL primary key,
+--	ADDRESS_ID SERIAL
+	ADDRESS_TYPE VARCHAR(80) default 'HOME'
+);
+
+--8
+create table if not exists Race_type_table(
+	RACE_TYPE_ID SERIAL primary key,
+--	RACE_ID SERIAL
+	RACE_TYPE VARCHAR(80) not null
+);
+
+--10
+create table if not exists Preference_table(
+	PREFERENCE_ID SERIAL primary key,
+	ADDRESS_ID SERIAL references Address_table(ADDRESS_ID),
+	PATIENT_ID SERIAL references Patient_table(PATIENT_ID),
+	PHONE_ID SERIAL references Phone_table(PHONE_ID),
+	PREFERENCE_TYPE INT references Preference_type_table(PREFERENCE_TYPE_ID),
+	PREFERENCE_VALUE VARCHAR(80) not null
+);
+
+--9
+create table if not exists Preference_type_table(
+	PREFERENCE_TYPE_ID SERIAL primary key,
+--	PREFERENCE_ID SERIAL
+	PREFERENCE_TYPE VARCHAR(80) not null
+);
+
+
+    -- PRIMARY KEY(Department_id),  
+--    CONSTRAINT fk_patient  
+--    	foreign KEY(PATIENT_ID)   
+--    	REFERENCES Patients_table(PATIENT_ID)  
+--);
+

@@ -119,3 +119,68 @@ create table if not exists Preference_type_table(
 --    	REFERENCES Patients_table(PATIENT_ID)  
 --);
 
+--21
+CREATE or REPLACE VIEW demographics AS
+    SELECT Patient.FIRST_NAME,Patient.LAST_NAME,Patient.MIDDLE_NAME,Patient.DOB,Patient.CHART_NUMBER,Patient.SEX,RACE.RACE_ID,ADDRESS.PRIMARY_ADDRESS,PHONE.PRIMARY_PHONE,FAX.PRIMARY_FAX
+    FROM ((((Patient NATURAL FULL OUTER JOIN ADDRESS)
+    NATURAL FULL OUTER JOIN FAX) NATURAL FULL OUTER JOIN PHONE)NATURAL FULL OUTER JOIN RACE);
+    
+--22
+SELECT FIRST_NAME,LAST_NAME,DOB,SEX,COUNT(*) 
+FROM Patient 
+GROUP BY FIRST_NAME,LAST_NAME,DOB,SEX;
+
+--23
+Create function generate_primary_key(FIRST_NAME VARCHAR(20), LAST_NAME VARCHAR(20),MIDDLE_NAME VARCHAR(20),DOB DATE, Sex INT)  
+returns int  
+language plpgsql  
+as  
+$$  
+Declare 
+
+Begin  
+  INSERT INTO Patient(FIRST_NAME,LAST_NAME,MIDDLE_NAME,DOB,SEX) values(FIRST_NAME,LAST_NAME,MIDDLE_NAME,DOB,Sex);
+  return (SELECT PATIENT_ID FROM Patient ORDER BY created_on DESC LIMIT 1);  
+End;  
+$$;  
+
+SELECT generate_primary_key('ruchit','shah','M','2002-01-01',1);
+
+--24
+CREATE OR REPLACE FUNCTION paging(
+ PageNumber INTEGER = NULL,
+ PageSize INTEGER = NULL
+ )
+ RETURNS TABLE (
+  LAST_NAME varchar,
+  FIRST_NAME varchar,
+  SEX INT,
+  DOB date
+) AS
+ $BODY$
+ BEGIN
+  RETURN QUERY
+  SELECT Patient.LAST_NAME,Patient.FIRST_NAME,Patient.SEX,Patient.DOB FROM Patient
+  ORDER BY LAST_NAME ASC ,FIRST_NAME ASC, SEX ASC, DOB ASC
+  LIMIT PageSize
+  OFFSET ((PageNumber-1) * PageSize);
+END;
+$BODY$
+LANGUAGE plpgsql;
+
+Select * from paging(1,4);
+Select * from paging(2,3);
+Select * from paging(3,3);
+
+--25
+SELECT
+              p.FIRST_NAME,Ph.PHONE_NUMBER,add.ADDRESS_ID
+FROM
+              Patient p
+              INNER JOIN ADDRESS add ON add.PATIENT_ID = P.PATIENT_ID
+              INNER JOIN Phone Ph ON ph.ADDRESS_ID = add.ADDRESS_ID
+WHERE Ph.PHONE_NUMBER = '3355668822';
+
+https://github.com/nikita-mirchandani/Meditab_Assignment/blob/main/NIKITA_MIRCHANDANI_SQL_ASSIGNMENT_01.sql 
+
+

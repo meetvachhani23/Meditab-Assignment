@@ -113,13 +113,4 @@ New Year's Eve. People were celebrating. They were all happy, but she was not.
 
 She found a corner made by two houses. She sat down and tried to keep out of the wind. She drew her feet up close to her. But
 she could not keep them warm. Her whole body grew colder. But she couldn't go home. She had not sold any matches today. She
-had no money to bring to her family. Her father would be angry. And it was cold at home, too. In her room, the wind whistled. The
-roof had large cracks. They were stopped with straw and rags. But the cold came in just the same.
-
-Her little hands were almost numb with cold. She had a thought. A match might bring her some comfort. If she only dared take
-one out of the bundle. She could draw it against the wall. It would light. She could warm her fingers by it. She took one out. She
-lit it. How it blazed, how it burned! It was a warm, bright flame. It looked like a candle. She held her hands over it. It felt
-wonderful.
-
-It seemed to the little girl as if she were sitting before a large fire. She stretched out her feet to warm them, too. But the small
-flame went out. The fire was gone. She had only the remains of the burnt-out match in her hand.
+had no money to bring to her family.

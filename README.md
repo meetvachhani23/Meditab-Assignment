@@ -93,3 +93,33 @@ still exists, even for new ventures.
 In other words, we continue to see a barrier in our heads that separates us from our dreams even though there is no real barrier.
 Don't let anything stop you. Not the resistance, the obstacles, your self-doubt, your circumstances, the length of the journey, your
 failures, or your past.
+
+little match girl
+It was the last night of the year. It had snowed, and it was very cold outside. Now it was nearly dark. In the cold and dark walked a
+poor little girl. She had no hat. She had no shoes. When she left home, she had shoes. They were very large. They had been her
+mother's. But she had run across the street to avoid a fast horse. The shoes were so big, they fell off as she ran.
+
+Another child had found one shoe. He ran off with it. She couldn't find the other. So the little girl walked on with her tiny, naked
+feet. They were quite red and numb from cold.
+
+The girl had many matches. She sold them for money. She kept most of them in an old apron. She held a bundle of them in her
+hand so people could see. But nobody had bought any from her the whole day. No one had given her a single cent.
+
+And now she was hungry. She had no money for food. She couldn't stay warm. Her body shook as she walked along. The flakes of
+snow covered her long, fair hair. It fell in lovely curls around her neck. But she didn't feel pretty.
+
+Right now she felt alone. She passed many houses. Candles shone in all the windows. And the air smelled of roast goose. It was
+New Year's Eve. People were celebrating. They were all happy, but she was not.
+
+She found a corner made by two houses. She sat down and tried to keep out of the wind. She drew her feet up close to her. But
+she could not keep them warm. Her whole body grew colder. But she couldn't go home. She had not sold any matches today. She
+had no money to bring to her family. Her father would be angry. And it was cold at home, too. In her room, the wind whistled. The
+roof had large cracks. They were stopped with straw and rags. But the cold came in just the same.
+
+Her little hands were almost numb with cold. She had a thought. A match might bring her some comfort. If she only dared take
+one out of the bundle. She could draw it against the wall. It would light. She could warm her fingers by it. She took one out. She
+lit it. How it blazed, how it burned! It was a warm, bright flame. It looked like a candle. She held her hands over it. It felt
+wonderful.
+
+It seemed to the little girl as if she were sitting before a large fire. She stretched out her feet to warm them, too. But the small
+flame went out. The fire was gone. She had only the remains of the burnt-out match in her hand.

@@ -114,3 +114,10 @@ New Year's Eve. People were celebrating. They were all happy, but she was not.
 She found a corner made by two houses. She sat down and tried to keep out of the wind. She drew her feet up close to her. But
 she could not keep them warm. Her whole body grew colder. But she couldn't go home. She had not sold any matches today. She
 had no money to bring to her family.
+
+module
+component - parent-child component data transfer
+Directive
+Service - basic
+pipe
+dependency injection

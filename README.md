@@ -4,6 +4,20 @@ git status
 
 git push -u -f origin main
 
+
+create
+git remote rm origin
+
+git remote -v
+
+git remote add origin url
+
+git remote -v
+
+git init
+
+git add -A
+
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Closures
 
 WebIMS Developer Training HTML & CSS Assignment 1

@@ -129,6 +129,26 @@ She found a corner made by two houses. She sat down and tried to keep out of the
 she could not keep them warm. Her whole body grew colder. But she couldn't go home. She had not sold any matches today. She
 had no money to bring to her family.
 
+irrigation
+
+The main occupation of the people in our country is farming. We depend on rainwater to grow crops. It does not rain regularly
+throughout the year. We do not receive the same amount of rainfall in all parts of the country. Thus we cannot depend only upon
+rainfall to grow our crops. We must make other arrangements to water the fields at the proper time. Irrigation is one of the
+important ways to do it. Canals, wells and tanks are three important means of irrigation. Today, India has one of the largest
+irrigation systems in the world.
+
+The canal is the most important source of irrigation in India. Channels are dug to build canals. River-water is diverted into these
+canals. The canals can take river-water to the far-off fields, where there is not enough water. At some places, the river-water has
+to be stored. We can build a barrier of cement and steel to block the flow of river-water. This is called a dam. A huge lake is
+created behind the dam. The water from the lake can regulate the flow of water in the river. The water from such lakes can also be
+diverted to the canals for irrigation. Punjab, Haryana, West Bengal and Tamil Nadu have a good network of canals. Dams also
+help in the production of electricity. When water from the lake behind the dam is made to fall from a high point, it is used to turn
+turbines which produce electricity. The dam also helps to control floods in the river. A project which helps to provide water for
+irrigation, produces electricity and controls floods in the river is called a multipurpose project. our government has built a
+number of multipurpose projects.
+
+Some of them are shown on the map. 
+
 module
 component - parent-child component data transfer
 Directive
